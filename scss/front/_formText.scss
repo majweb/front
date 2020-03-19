@@ -1,0 +1,40 @@
+.page-main__form-text {
+  text-align: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 16%,
+    rgba(0, 160, 227, 0.1825105042016807) 100%
+  );
+  font-family: $sen;
+
+  p:first-child {
+    font-size: 39px;
+    color: rgb(0, 160, 227);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+  p:last-child {
+    font-size: 27px;
+    color: $gray;
+    text-transform: uppercase;
+  }
+}
+@media screen and(min-width:1200px) {
+  .page-main__form-text {
+    text-align: left;
+    width: 76%;
+    height: 160px;
+    p:first-child {
+      font-size: 49px;
+      margin-left: 30px;
+    }
+    p:last-child {
+      font-size: 37px;
+      margin-left: 30px;
+      margin-top: -15px;
+    }
+  }
+}

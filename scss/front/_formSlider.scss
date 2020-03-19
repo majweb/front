@@ -1,0 +1,259 @@
+.form-inside {
+  margin-top: 20px;
+  .form-row {
+    padding: 0 15px;
+  }
+  .form-control {
+    border: 0;
+  }
+  .form-control {
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.877);
+    }
+  }
+  .special {
+    border-bottom: 3px solid rgba(0, 160, 227, 0.35);
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  :not(.form-check) > label {
+    margin-bottom: 0;
+    color: white;
+    font-size: 18px;
+  }
+  .form-check {
+    display: flex;
+    align-items: flex-end;
+    font-size: 13px;
+    color: $gray;
+    font-family: $arial;
+    margin-bottom: 3px;
+  }
+  label.first-letter {
+    font-size: 22px;
+  }
+  input {
+    height: 33px;
+    background: rgba(#fff, 0.7);
+    font-family: $arial;
+    color: $gray;
+    border-radius: 20px;
+    margin-bottom: 5px;
+  }
+
+  font-family: $arial;
+  background: rgba(0, 160, 227, 1);
+  // border: 10px solid rgba(0, 160, 227, 0.95);
+  box-shadow: 0 0 0 10px rgba(0, 160, 227, 0.35);
+  text-align: center;
+  overflow: hidden;
+  .page-main__form-inside {
+    .page-main__form-white {
+      background: white;
+      height: 70px;
+      font-family: $sen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 35px;
+      color: rgba(0, 160, 227, 0.5);
+    }
+    .page-main__form-pink {
+      background: rgb(249, 217, 233);
+      padding: 5px 0;
+      margin-top: 5px;
+    }
+  }
+  .send-form {
+    background-color: $primary;
+    border: 2px solid white;
+    font-size: 25px;
+    font-family: $arial;
+    color: white;
+    height: 50px;
+    width: 140px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.s-hidden {
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font: normal 11px/22px Arial, Sans-Serif;
+  width: 95%;
+  height: 33px;
+  border-radius: 20px;
+}
+.styledSelect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #d9f1fb;
+  padding: 0 10px;
+  font-weight: bold;
+  border-radius: 15px;
+  padding-top: 5px;
+  color: $gray;
+  border: 1px solid rgba(0, 160, 227, 0.5);
+}
+.styledSelect:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: $gray transparent transparent transparent;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.styledSelect:active,
+.styledSelect.active {
+  background-color: rgba(255, 255, 255, 0.877);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  + .options {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    // border: 1px solid rgba(0, 160, 227, 0.5);
+  }
+}
+.options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0 0;
+  padding: 0 0;
+  list-style: none;
+  border-radius: 20px;
+  color: $gray;
+  font-weight: bold;
+
+  background-color: rgba(255, 255, 255, 0.877);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.options li {
+  padding: 0 6px;
+  // border-radius: 20px;
+  margin: 0 0;
+  padding: 0 10px;
+  position: relative;
+  transition: 0.3s;
+}
+.options li:not(:first-child) {
+  &:after {
+    content: "";
+    width: 80%;
+    height: 3px;
+    background-color: rgba(0, 160, 227, 0.5);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+  }
+}
+.options li:hover {
+  color: lighten($primary, 30%);
+  border-radius: 0;
+}
+
+.form-check-label {
+  display: block;
+  padding-left: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.form-check-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border: 1px solid rgba(0, 160, 227, 0.5);
+}
+
+/* On mouse-over, add a grey background color */
+.form-check-label:hover input ~ .checkmark {
+  background-color: rgba(0, 160, 227, 0.5);
+}
+
+/* When the checkbox is checked, add a blue background */
+.form-check-label input:checked ~ .checkmark {
+  background-color: rgba(0, 160, 227, 0.5);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.form-check-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.form-check-label .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@media screen and(min-width:1000px) {
+  .form-inside {
+    margin-top: 0;
+    border-radius: 50%;
+    width: 523px;
+    height: 523px;
+    margin-top: -335px;
+    float: right;
+    position: relative;
+    right: -10px;
+    z-index: 999999;
+  }
+  .custom {
+    width: 285px;
+  }
+  .custom-margin {
+    margin-left: 42px;
+  }
+  .form-row {
+    padding: 0;
+  }
+}

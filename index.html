@@ -15,6 +15,11 @@
       href="https://raw.githubusercontent.com/jonsuh/hamburgers/master/dist/hamburgers.css"
     />
     <link rel="stylesheet" href="dist/css/main.min.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -46,20 +51,20 @@
           </div>
         </nav>
       </div>
-      <div class="slider">
+      <div class="page-main__slider">
         <div
-          id="carouselExampleIndicators"
+          id="carouselIndicators"
           class="carousel slide"
           data-ride="carousel"
         >
           <ol class="carousel-indicators">
             <li
-              data-target="#carouselExampleIndicators"
+              data-target="#carouselIndicators"
               data-slide-to="0"
               class="active"
             ></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselIndicators" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -95,24 +100,211 @@
           </div>
           <a
             class="carousel-control-prev"
-            href="#carouselExampleIndicators"
+            href="#carouselIndicators"
             role="button"
             data-slide="prev"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="prev-icon" aria-hidden="true"><</span>
             <span class="sr-only">Previous</span>
           </a>
           <a
             class="carousel-control-next"
-            href="#carouselExampleIndicators"
+            href="#carouselIndicators"
             role="button"
             data-slide="next"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="next-icon " aria-hidden="true">></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
       </div>
+      <div class="form-inside">
+        <div class="page-main__form-inside">
+          <div class="page-main__form-white">
+            <span>Formularz</span>
+          </div>
+          <form action="#" autocomplete="off" method="POST">
+            <div class="form-group col-md-10 offset-md-1 mt-1">
+              <label for="fullName"
+                ><span class="first-letter">I</span>mie i
+                <span class="first-letter">N</span>azwisko*</label
+              >
+              <input type="email" class="form-control id="fullName"
+              name="fullName" />
+            </div>
+            <div class="form-group col-md-10 offset-md-1">
+              <label for="email"
+                >Adres <span class="first-letter">E</span>-mail*</label
+              >
+              <input type="text" class="form-control" id="email" name="email" />
+            </div>
+            <label
+              ><span class="first-letter">N</span>umer
+              <span class="first-letter">T</span>elefonu*</label
+            >
+            <div class="form-row">
+              <div class="form-group col-md-3 offset-md-1 custom-margin">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="prefix"
+                  name="prefix"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control custom"
+                  id="phone"
+                  name="phone"
+                />
+              </div>
+            </div>
+            <div class="form-group col-md-10 offset-md-1">
+              <label for="selectbox1"
+                ><span class="first-letter">Z</span>najomość
+                <span class="first-letter">J</span>ęzyka
+                <span class="first-letter">N</span>iemieckiego*</label
+              >
+              <select id="selectbox1" name="lang" class="form-control">
+                <option value="1" class="special">Brak</option>
+                <option value="2" class="special">Podstawow</option>
+                <option value="2" class="special">Podstawow</option>
+                <option value="2" class="special">Podstawow</option>
+              </select>
+            </div>
+            <div class="page-main__form-pink">
+              <div class="agree col-md-8 offset-md-2 text-left">
+                <div class="form-check">
+                  <label class="form-check-label" for="gridRadios1">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="gridRadios"
+                      id="gridRadios1"
+                      value="1"
+                    />
+                    <span class="checkmark"></span> </label
+                  >zgoda1...
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="gridRadios2">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="gridRadios"
+                      id="gridRadios2"
+                      value="1"
+                    />
+                    <span class="checkmark"></span> </label
+                  >zgoda2...
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="gridRadios3">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="gridRadios"
+                      id="gridRadios3"
+                      value="1"
+                    />
+                    <span class="checkmark"></span> </label
+                  >zgoda3...
+                </div>
+              </div>
+              <div class="all col-md-5 offset-md-4 mt-2">
+                <div class="form-check">
+                  <label class="form-check-label" for="all">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="all"
+                      id="all"
+                      value="1"
+                    />
+                    <span class="checkmark"></span> </label
+                  >Zaznacz wszystkie
+                </div>
+              </div>
+            </div>
+            <input type="submit" value="Wyślij" class="send-form" />
+          </form>
+        </div>
+      </div>
+      <!-- form-text -->
+      <div class="form-text-inner">
+        <div class="page-main__form-text">
+          <p>Wypełnij</p>
+          <p>Formulatrz kontaktowy</p>
+        </div>
+      </div>
+      <!-- begin work -->
+      <div class="page-main__begin-work">
+        <div class="page-main__text">Jak <span>Rozpocząć</span> pracę?</div>
+        <div class="page-main__cross"></div>
+      </div>
+      <div class="page-main__work">
+        <div class="page-main__boxes row text-center">
+          <div class="page-main__box col-xs-12 col-md-4">
+            <p class="page-main__title">
+              Krok 1
+            </p>
+            <div class="page-main__icon">
+              <img src="images/icons/strona główna 1.png" alt="box1" />
+              <div class="page-main__icon-text">
+                <p>Wyslij</p>
+                <p>formualrz</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-main__box col-xs-12 col-md-4">
+            <p class="page-main__title">
+              Krok 1
+            </p>
+            <div class="page-main__icon">
+              <img src="images/icons/strona główna 2.png" alt="box1" />
+              <div class="page-main__icon-text">
+                <p>Wyslij</p>
+                <p>formualrz</p>
+              </div>
+            </div>
+          </div>
+          <div class="page-main__box col-xs-12 col-md-4">
+            <p class="page-main__title">
+              Krok 1
+            </p>
+            <div class="page-main__icon">
+              <img src="images/icons/strona główna 3.png" alt="box1" />
+              <div class="page-main__icon-text">
+                <p>Wyslij</p>
+                <p>formualrz</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+      repellendus impedit in quis ipsam provident tenetur pariatur aspernatur
+      amet! Ad earum quaerat obcaecati enim. Aspernatur, in impedit? At
+      doloribus corrupti voluptatem repellendus delectus quisquam explicabo
+      modi? Reprehenderit dolor asperiores ullam laboriosam amet labore voluptas
+      expedita velit aliquam nostrum assumenda ab eligendi, distinctio molestias
+      corporis mollitia suscipit ipsam ad tenetur consequatur odit? Ab ex
+      voluptatum recusandae eligendi error delectus vel nobis harum illum ut
+      maiores ipsa dolores repellat, adipisci ipsum tempora est mollitia dolorem
+      facilis! Illo reprehenderit sapiente fugiat, repellendus odio in quod
+      unde? Voluptatibus, porro perspiciatis asperiores exercitationem dolores
+      mollitia aspernatur sint labore aliquid. Deleniti, laudantium? Accusamus
+      excepturi libero autem natus, et unde culpa vero possimus doloremque
+      quibusdam. Quaerat quo non placeat corporis velit! Itaque autem, sapiente
+      fugiat harum sed facilis labore laboriosam dignissimos praesentium a qui!
+      Exercitationem, doloribus sint dicta minima tempore molestiae! Ratione
+      recusandae inventore quo eos obcaecati nemo amet, ad quae praesentium, ut
+      facere quis facilis nobis consectetur explicabo optio ullam suscipit
+      architecto enim! Blanditiis culpa rerum enim hic qui tenetur sequi maiores
+      perspiciatis dicta mollitia, harum possimus, recusandae exercitationem
+      praesentium dolores voluptate ut voluptates consequatur quasi earum
+      assumenda neque quis at? Expedita placeat facilis eveniet voluptatem!
     </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -137,6 +329,85 @@
         this.classList.toggle("open");
         menu.classList.toggle("open");
         slider.classList.toggle("open");
+      });
+      // Iterate over each select element
+      $("select").each(function() {
+        // Cache the number of options
+        var $this = $(this),
+          numberOfOptions = $(this).children("option").length;
+
+        // Hides the select element
+        $this.addClass("s-hidden");
+
+        // Wrap the select element in a div
+        $this.wrap('<div class="select"></div>');
+
+        // Insert a styled div to sit over the top of the hidden select element
+        $this.after('<div class="styledSelect"></div>');
+
+        // Cache the styled div
+        var $styledSelect = $this.next("div.styledSelect");
+
+        // Show the first select option in the styled div
+        $styledSelect.text(
+          $this
+            .children("option")
+            .eq(0)
+            .text()
+        );
+
+        // Insert an unordered list after the styled div and also cache the list
+        var $list = $("<ul />", {
+          class: "options"
+        }).insertAfter($styledSelect);
+
+        // Insert a list item into the unordered list for each select option
+        for (var i = 0; i < numberOfOptions; i++) {
+          $("<li />", {
+            text: $this
+              .children("option")
+              .eq(i)
+              .text(),
+            rel: $this
+              .children("option")
+              .eq(i)
+              .val()
+          }).appendTo($list);
+        }
+
+        // Cache the list items
+        var $listItems = $list.children("li");
+
+        // Show the unordered list when the styled div is clicked (also hides it if the div is clicked again)
+        $styledSelect.click(function(e) {
+          e.stopPropagation();
+          $("div.styledSelect.active").each(function() {
+            $(this)
+              .removeClass("active")
+              .next("ul.options")
+              .hide();
+          });
+          $(this)
+            .toggleClass("active")
+            .next("ul.options")
+            .toggle();
+        });
+
+        // Hides the unordered list when a list item is clicked and updates the styled div to show the selected list item
+        // Updates the select element to have the value of the equivalent option
+        $listItems.click(function(e) {
+          e.stopPropagation();
+          $styledSelect.text($(this).text()).removeClass("active");
+          $this.val($(this).attr("rel"));
+          $list.hide();
+          /* alert($this.val()); Uncomment this for demonstration! */
+        });
+
+        // Hides the unordered list when clicking outside of it
+        $(document).click(function() {
+          $styledSelect.removeClass("active");
+          $list.hide();
+        });
       });
     </script>
   </body>

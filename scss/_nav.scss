@@ -125,6 +125,14 @@
     justify-content: center;
     transition: background-color 0.3s;
     position: relative;
+    &:after {
+      content: "";
+      transition: 0.3s;
+    }
+    &:before {
+      content: "";
+      transition: 0.3s;
+    }
     &:hover {
       background-color: white;
       .page-main__menu-link {
@@ -132,9 +140,19 @@
       }
       &:after {
         content: "";
+        transition: 0.3s;
         position: absolute;
         height: 0;
         width: 0;
+      }
+      &:before {
+        content: "";
+        height: 100%;
+        transition: 0.3s;
+        background-color: white;
+        position: absolute;
+        left: -3px;
+        width: 3px;
       }
     }
   }
@@ -145,7 +163,16 @@
       background-color: white;
       width: 3px;
       height: 80%;
+      transition: 0.3s;
       right: 0;
+    }
+    &:after {
+      content: "";
+      transition: 0.3s;
+    }
+    &:before {
+      content: "";
+      transition: 0.3s;
     }
     &:hover {
       &:after {
@@ -154,6 +181,7 @@
       }
       &:before {
         content: "";
+        transition: 0.3s;
         height: 100%;
         background-color: white;
         position: absolute;

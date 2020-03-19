@@ -1,12 +1,19 @@
-.slider {
+.page-main__slider {
   margin-top: 10px;
   border: 5px solid $primary;
 }
-.slider.open {
+.page-main__slider.open {
   margin-top: 220px;
 }
+.prev-icon,
+.next-icon {
+  font-size: 40px;
+  font-weight: bold;
+  color: $secondary;
+  text-shadow: 1px 1px 3px black;
+}
 @media screen and (min-width: 770px) {
-  .slider {
+  .page-main__slider {
     .carousel-indicators li {
       border-radius: 50%;
       width: 10px;
