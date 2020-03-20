@@ -1,0 +1,132 @@
+.page-main__offerts {
+  padding: 0 20px;
+  margin-bottom: 30px;
+  .page-main__offert-box {
+    position: relative;
+    border: 2px solid rgb(235, 131, 179);
+    flex-basis: 100%;
+    margin-top: 20px;
+    background-color: rgba(#fff, 0.5);
+    overflow: hidden;
+    z-index: 1;
+    .page-main__offert-link {
+      position: absolute;
+      right: 0;
+      background-color: $primary;
+      border-radius: 0 0 0 115px;
+      width: 115px;
+      height: 120px;
+      a {
+        &:hover {
+          text-decoration: none;
+          p {
+            color: lighten($gray, 40%);
+          }
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        border-radius: 0 0 0 126px;
+        background: rgb(235, 119, 173);
+        right: 0;
+        top: 0;
+        width: 127px;
+        height: 132px;
+        z-index: -1;
+      }
+      p {
+        transition: 0.3s;
+        color: white;
+        text-align: center;
+        margin: 0;
+        position: relative;
+        right: -8px;
+        font-size: 20px;
+        top: 20px;
+        font-weight: bold;
+        line-height: 20px;
+      }
+      p:first-child {
+        text-transform: uppercase;
+      }
+    }
+    .page-main__offert-land {
+      color: rgb(178, 179, 179);
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-left: 10px;
+      margin-top: 10px;
+      position: relative;
+      width: 192px;
+      margin-bottom: 0;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        background-color: $primary;
+        height: 4px;
+        width: 100%;
+      }
+    }
+    .page-main__offert-city {
+      color: $primary;
+      font-size: 29px;
+      margin: 0;
+      margin-left: 10px;
+      margin-top: -5px;
+    }
+    .page-main__offert-go {
+      background-color: rgb(178, 179, 179);
+      height: 39px;
+      font-size: 23px;
+      font-family: $arial;
+      color: white;
+      margin-left: 10px;
+      position: relative;
+      padding-left: 15px;
+      left: -15px;
+      width: 220px;
+      margin-bottom: 20px;
+    }
+    .page-main__offert-desc {
+      //   height: 142px;
+      background-color: rgba(#fff, 0.5);
+      border-bottom: 9px solid rgb(235, 236, 236);
+      padding-left: 10px;
+      .page-main__offert-desc-title {
+        margin: 0;
+        color: $primary;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 4px;
+      }
+      .page-main__offert-desc-short {
+        margin: 0;
+      }
+    }
+    .page-main_offert-published {
+      font-size: 13px;
+      color: rgb(137, 137, 137);
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      margin-top: 5px;
+      padding-bottom: 10px;
+      .page-main_offert-published-icon img {
+        width: 43px;
+        height: 40px;
+        margin-right: 5px;
+      }
+    }
+    @media screen and(min-width:992px) {
+      flex-basis: 523px;
+      margin-right: 10px;
+      margin-bottom: -10px;
+      .page-main__offert-desc {
+        height: 150px;
+      }
+    }
+  }
+}

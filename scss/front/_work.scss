@@ -1,13 +1,81 @@
+.background-drop {
+  background: url("/images/bg_offert.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  padding-bottom: 15px;
+}
 .page-main__boxes {
+  .page-main__icon {
+    width: 252px;
+    height: 252px;
+    border-radius: 50%;
+    border: 3px solid $blue;
+    margin: 0 auto;
+    padding-top: 10px;
+    overflow: hidden;
+    position: relative;
+    &:hover .page-main__icon-text {
+      background-color: lighten($blue, 10%);
+    }
+    img {
+      position: absolute;
+      left: 50%;
+      top: 32%;
+      transform: translate(-50%, -50%);
+    }
+    .page-main__icon-text {
+      background-color: $blue;
+      width: 100%;
+      margin-top: 20px;
+      height: 81px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      transition: 0.3s;
+      p {
+        font-size: 28px;
+        margin: 0;
+        color: white;
+        font-family: $arial;
+        line-height: 32px;
+        font-weight: 100;
+      }
+      p:first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
   margin-top: 30px;
   .page-main__title {
     font-family: $arial;
     color: rgb(137, 137, 137);
     font-size: 39px;
     text-transform: uppercase;
+    font-weight: bold;
   }
   .page-main__box:not(:last-child) {
     position: relative;
+  }
+}
+.page-main__offert-text {
+  text-align: center;
+  color: $primary;
+  font-size: 46px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 40px;
+  margin-top: 50px;
+  p:not(:first-child) {
+    text-transform: uppercase;
+  }
+}
+@media screen and(min-width:1200px) {
+  .page-main__box:not(:last-child) {
     &:after {
       content: url("/images/icons/arrow.png");
       position: absolute;
@@ -18,5 +86,12 @@
       display: block;
       font-weight: bold;
     }
+  }
+}
+@media screen and(min-width:575px) {
+  .page-main__offert-text {
+    padding-left: 30px;
+    font-size: 52px;
+    text-align: left;
   }
 }
